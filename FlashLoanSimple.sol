@@ -29,6 +29,7 @@ interface IERC20 {
 
     constructor(address _addressProvider) {
         ADDRESSES_PROVIDER = IPoolAddressesProvider(_addressProvider);
+        POOL = IPool(ADDRESSES_PROVIDER.getPool());
         owner = msg.sender;
     }
     
