@@ -57,6 +57,9 @@ interface IERC20 {
     ) external returns (bool) {
         require(msg.sender == address(POOL), "Caller must be Pool");
         require(initiator == address(this), "Initiator invalid");
+        
+       // Your Profit Logic
+
         uint256 amountOwing = amount + premium;
         IERC20(asset).approve(address(POOL), amountOwing);
 
