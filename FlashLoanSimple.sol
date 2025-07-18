@@ -79,4 +79,5 @@ interface IERC20 {
     }
 
     receive() external payable {}
+    fallback() external payable {}
 }
